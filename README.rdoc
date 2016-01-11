@@ -1,0 +1,33 @@
+= AmsVersioning
+
+This project rocks and uses MIT-LICENSE.
+
+== Installation
+
+Add this line to your application's Gemfile:
+
+```
+gem 'active_model_serializers' # already included on Rails >= 5
+gem 'ams_versioning'
+```
+
+And then execute:
+
+```
+$ bundle
+```
+
+Then add version to your route. Example:
+
+```ruby
+constraints subdomain: 'api', format: 'json' do
+  scope '/v:api_version' do
+    resources :messages
+  end
+end
+```
+
+As an alternative you can use a gem for this task such as https://github.com/bploetz/versionist
+
+== Getting started
+
